@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Tour Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Explore the world with us!</h2>
+            <p>Book your dream tour with ease. Find the best destinations, packages, and itineraries.</p>
+            <a href="#tours" class="btn">Browse Tours</a>
+        </div>
+    </section>
+
+    <section id="tours" class="tour-listing">
+        <div class="container">
+            <h2>Popular Tours</h2>
+            <div class="tour-item">
+                <img src="tour1.jpg" alt="Tour 1">
+                <h3>Tour to Paris</h3>
+                <p>7 Days, 6 Nights</p>
+                <p>Price: $1200</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="tour-item">
+                <img src="tour2.jpg" alt="Tour 2">
+                <h3>Adventure in the Swiss Alps</h3>
+                <p>5 Days, 4 Nights</p>
+                <p>Price: $1500</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="tour-item">
+                <img src="tour3.jpg" alt="Tour 3">
+                <h3>Safari in Kenya</h3>
+                <p>10 Days, 9 Nights</p>
+                <p>Price: $2200</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We offer guided tours to some of the world's most beautiful and exotic destinations. With years of
+                experience, we ensure a memorable journey for each of our travelers.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-us">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="/submit" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tour Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "YOUR_API_KEY",
+          authDomain: "YOUR_AUTH_DOMAIN",
+          projectId: "YOUR_PROJECT_ID",
+          storageBucket: "YOUR_STORAGE_BUCKET",
+          messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+          appId: "YOUR_APP_ID",
+        };
+      
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+      </script>
+
+
+</body>
+
+</html>
